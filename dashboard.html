@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inkwell – Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="dashboard">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Ink<span>well</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="nav-links"></ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="dash-head">
+      <div>
+        <h1 id="welcome">Dashboard</h1>
+        <p style="color:var(--muted)">Here's an overview of your writing.</p>
+      </div>
+      <a class="btn" href="create-blog.html">+ New blog</a>
+    </div>
+
+    <section class="stats">
+      <div class="stat"><b id="stat-posts">0</b><span>Posts published</span></div>
+      <div class="stat"><b id="stat-cats">0</b><span>Categories used</span></div>
+      <div class="stat"><b id="stat-words">0</b><span>Total words</span></div>
+    </section>
+
+    <h2 class="section-title">Your posts</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Title</th><th>Category</th><th>Date</th><th>Action</th></tr>
+        </thead>
+        <tbody id="my-posts"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>© 2026 Inkwell · Module 1 Frontend Project</footer>
+</body>
+</html>

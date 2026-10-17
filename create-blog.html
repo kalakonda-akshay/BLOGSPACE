@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inkwell – Create Blog</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="create">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Ink<span>well</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="nav-links"></ul>
+    </div>
+  </header>
+
+  <main class="container auth-wrap">
+    <form class="form-card wide" id="blog-form" novalidate>
+      <h1>Create a new blog</h1>
+      <p class="sub">Share something you've learned.</p>
+      <div class="alert" id="alert" role="alert"></div>
+
+      <div class="field">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="A catchy title">
+        <div class="error"></div>
+      </div>
+      <div class="field">
+        <label for="category">Category</label>
+        <select id="category" name="category">
+          <option value="">Select a category</option>
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>JavaScript</option>
+          <option>Career</option>
+          <option>Other</option>
+        </select>
+        <div class="error"></div>
+      </div>
+      <div class="field">
+        <label for="body">Content <small style="color:var(--muted)">(<span id="count">0</span> characters)</small></label>
+        <textarea id="body" name="body" placeholder="Write your post here…"></textarea>
+        <div class="error"></div>
+      </div>
+      <button class="btn" type="submit">Publish</button>
+      <a class="btn btn-outline" href="dashboard.html">Cancel</a>
+    </form>
+  </main>
+
+  <footer>© 2026 Inkwell · Module 1 Frontend Project</footer>
+</body>
+</html>
